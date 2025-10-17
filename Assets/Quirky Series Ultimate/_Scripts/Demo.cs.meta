@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c11fce0a445f57648a46359d8dbca3d3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247228
+  packageName: Sparrow - Quirky Series
+  packageVersion: 1.4.1
+  assetPath: Assets/Quirky Series Ultimate/_Scripts/Demo.cs
+  uploadId: 566470
