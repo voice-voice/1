@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 10
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,12 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,6 +67,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -125,7 +129,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7628903570778885976}
+    m_TransformParent: {fileID: 6098803083221851320}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalPosition.x
@@ -133,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.564
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalRotation.w
@@ -145,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalRotation.y
@@ -153,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -166,6 +170,14 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6177155099693592008, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6177155099693592008, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_Name
@@ -230,8 +242,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753414710}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -281,12 +294,8 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
 --- !u!4 &1753414713
 Transform:
   m_ObjectHideFlags: 0
@@ -296,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 1753414710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18703736, y: -0.052882742, z: -0.75493133}
+  m_LocalPosition: {x: -1.75, y: 2.3, z: -2.893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -311,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 3784283954169379799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.009, y: 0.674, z: -2.835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -465,12 +474,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &6098803083221851319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -485,11 +494,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052581107945448293, guid: ad8525d9448b0284fa969e7bcb8c7f34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.564
       objectReference: {fileID: 0}
     - target: {fileID: 4052581107945448293, guid: ad8525d9448b0284fa969e7bcb8c7f34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 4052581107945448293, guid: ad8525d9448b0284fa969e7bcb8c7f34, type: 3}
       propertyPath: m_LocalRotation.w
@@ -525,7 +534,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4052581107945448293, guid: ad8525d9448b0284fa969e7bcb8c7f34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019497678}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad8525d9448b0284fa969e7bcb8c7f34, type: 3}
 --- !u!4 &6098803083221851320 stripped
@@ -545,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed093621d8d342e9b74c757be4c323b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackerCam: {fileID: 0}
+  trackerCam: {fileID: 3784283954169379795}
   imageTargets:
   - id: Cotton_Cookie_Kingdom
     transform: {fileID: 6098803083221851320}
@@ -555,7 +567,7 @@ MonoBehaviour:
   trackedIds: []
   trackerSettings:
     maxSimultaneousTargets: 1
-    targetFrameRate: 60
+    targetFrameRate: -1
     advancedSettings:
       maxFrameLength: 500
       maxFrameArea: 80
@@ -592,7 +604,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6098803083221851320}
-  - {fileID: 1019497678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7628903570778885977
